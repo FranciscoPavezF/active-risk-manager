@@ -1,0 +1,75 @@
+/* ========================================================================== */
+/* ARM - Active Risk Manager (Enterprise SaaS Design System)                  */
+/* ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-canvas: #F8FAFC;
+    --surface-white: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    --brand-blue: #2563EB;
+    --brand-dark: #0F172A;
+    --border-color: #E2E8F0;
+    --alert-red: #DC2626;
+    --alert-amber: #CA8A04;
+    --alert-emerald: #16A34A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar personalizada para apariencia SaaS limpia */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Clases de utilidad corporativa comunes */
+.saas-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.saas-badge-red {
+    background-color: #FEF2F2;
+    color: var(--alert-red);
+    border: 1px solid #FEE2E2;
+}
+
+.saas-badge-amber {
+    background-color: #FEFCE8;
+    color: var(--alert-amber);
+    border: 1px solid #FEF08A;
+}
+
+.saas-badge-emerald {
+    background-color: #F0FDF4;
+    color: var(--alert-emerald);
+    border: 1px solid #DCFCE7;
+}
+
+.saas-badge-blue {
+    background-color: #EFF6FF;
+    color: var(--brand-blue);
+    border: 1px solid #DBEAFE;
+}
