@@ -1312,7 +1312,10 @@ async function verRegistro(tipo, id) {
             "verTextoTipoRegistro",
             `${tipo} ${id} · VIREON`
         );
-
+// Cargar trazabilidad del registro
+if (typeof renderizarTrazabilidad === "function") {
+    renderizarTrazabilidad(tipo, registro);
+}
 
         modal.classList
             .remove("hidden");
@@ -2095,4 +2098,134 @@ function escaparJS(valor) {
     return String(valor ?? "")
         .replaceAll("\\", "\\\\")
         .replaceAll("'", "\\'");
+}
+// ============================================================
+// TRAZABILIDAD DEL REGISTRO
+// ============================================================
+
+function renderizarTrazabilidad(tipo, registro) {
+
+    const contenedor =
+        document.getElementById("verTrazabilidad");
+
+    if (!contenedor) {
+        return;
+    }
+
+    const responsable =
+        registro.responsable ||
+        "Sistema VIREON";
+
+    const fecha =
+        registro.ultimaActualizacion ||
+        registro.fechaActualizacion ||
+        registro.fecha ||
+        "Sin fecha";
+
+    const nombreTipo =
+        tipo === "Oportunidad"
+            ? "Oportunidad"
+            : "Riesgo";
+
+      const claveTrazabilidad =
+    `vireon_trazabilidad_${registro.id}`;
+
+let historial = [];
+
+try {
+    historial =
+        JSON.parse(
+            localStorage.getItem(claveTrazabilidad)
+        ) || [];
+} catch (error) {
+    historial = [];
+}
+
+const historialHTML =
+    historial.map(evento => `
+        <div class="relative pl-6 border-l border-slate-200">
+
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-violet-500"></span>
+
+            <p class="text-xs font-semibold text-slate-800">
+                ${escaparHTML(evento.titulo || "Actualización")}
+            </p>
+
+            <p class="text-xs text-slate-500 mt-1">
+                ${escaparHTML(evento.descripcion || "")}
+            </p>
+
+            <p class="text-[11px] text-violet-600 mt-2 font-medium">
+                ${escaparHTML(evento.responsable || "Sistema VIREON")}
+            </p>
+
+            <p class="text-[10px] text-slate-400 mt-1">
+                ${escaparHTML(evento.fecha || "Sin fecha")}
+            </p>
+
+        </div>
+    `).join("");      
+    contenedor.innerHTML = `
+        <div class="space-y-5">
+
+            <div class="relative pl-6 border-l border-slate-200">
+
+                <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-blue-600"></span>
+
+                <p class="text-xs font-semibold text-slate-800">
+                    Registro creado
+                </p>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    ${nombreTipo} incorporado al portafolio.
+                </p>
+
+                <p class="text-[11px] text-blue-600 mt-2 font-medium">
+                    ${escaparHTML(responsable)}
+                </p>
+
+                <p class="text-[10px] text-slate-400 mt-1">
+                    ${escaparHTML(fecha)}
+                </p>
+
+            </div>
+
+            <div class="relative pl-6 border-l border-slate-200">
+
+                <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-amber-500"></span>
+
+                <p class="text-xs font-semibold text-slate-800">
+                    Plan de acción definido
+                </p>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    Se establece tratamiento y seguimiento del registro.
+                </p>
+
+                <p class="text-[11px] text-slate-600 mt-2 font-medium">
+                    ${escaparHTML(responsable)}
+                </p>
+
+            </div>
+
+            <div class="relative pl-6">
+
+                <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-emerald-500"></span>
+
+                <p class="text-xs font-semibold text-slate-800">
+                    Seguimiento actualizado
+                </p>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    Se registra avance en las acciones asociadas.
+                </p>
+
+                <p class="text-[11px] text-slate-600 mt-2 font-medium">
+                    Sistema VIREON
+                </p>
+
+            </div>
+${historialHTML}
+        </div>
+    `;
 }

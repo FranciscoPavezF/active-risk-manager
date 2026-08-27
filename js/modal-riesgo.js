@@ -1957,12 +1957,141 @@ document.addEventListener("DOMContentLoaded", function () {
                             "Riesgo"
                         ) {
 
-                            await RiesgosStorage
-                                .actualizar(
-                                    idEnEdicion,
-                                    datosRiesgo
-                                );
+                          // Obtener versión anterior antes de actualizar
+const riesgoAnterior =
+    await RiesgosStorage.obtenerPorId(
+        idEnEdicion
+    );
 
+const cambios = [];
+
+if (riesgoAnterior) {
+
+    if (riesgoAnterior.estado !== datosRiesgo.estado) {
+        cambios.push(
+            `Estado: ${riesgoAnterior.estado || "-"} → ${datosRiesgo.estado || "-"}`
+        );
+    }
+
+    if (
+        Number(riesgoAnterior.probabilidad) !==
+        Number(datosRiesgo.probabilidad)
+    ) {
+        cambios.push(
+            `Probabilidad: ${riesgoAnterior.probabilidad || "-"} → ${datosRiesgo.probabilidad || "-"}`
+        );
+    }
+
+    if (
+        Number(riesgoAnterior.impacto) !==
+        Number(datosRiesgo.impacto)
+    ) {
+        cambios.push(
+            `Impacto: ${riesgoAnterior.impacto || "-"} → ${datosRiesgo.impacto || "-"}`
+        );
+    }
+
+    if (
+        riesgoAnterior.criticidad !==
+        datosRiesgo.criticidad
+    ) {
+        cambios.push(
+            `Criticidad: ${riesgoAnterior.criticidad || "-"} → ${datosRiesgo.criticidad || "-"}`
+        );
+    }
+
+    if (
+        riesgoAnterior.responsable !==
+        datosRiesgo.responsable
+    ) {
+        cambios.push(
+            `Responsable: ${riesgoAnterior.responsable || "Sin asignar"} → ${datosRiesgo.responsable || "Sin asignar"}`
+        );
+    }
+
+    if (
+        riesgoAnterior.planAccion !==
+        datosRiesgo.planAccion
+    ) {
+        cambios.push(
+            "Plan de acción actualizado"
+        );
+    }
+
+    if (
+        riesgoAnterior.titulo !==
+        datosRiesgo.titulo
+    ) {
+        cambios.push(
+            "Título actualizado"
+        );
+    }
+
+    if (
+        riesgoAnterior.descripcion !==
+        datosRiesgo.descripcion
+    ) {
+        cambios.push(
+            "Descripción actualizada"
+        );
+    }
+}
+
+
+// Guardar actualización
+await RiesgosStorage
+    .actualizar(
+        idEnEdicion,
+        datosRiesgo
+    );
+
+
+// Guardar trazabilidad
+const claveTrazabilidad =
+    `vireon_trazabilidad_${idEnEdicion}`;
+
+let historial = [];
+
+try {
+
+    historial =
+        JSON.parse(
+            localStorage.getItem(
+                claveTrazabilidad
+            )
+        ) || [];
+
+} catch (error) {
+
+    historial = [];
+}
+
+
+historial.push({
+
+    tipo: "actualizacion",
+
+    titulo: "Registro actualizado",
+
+    descripcion:
+        cambios.length
+            ? cambios.join(" · ")
+            : "Se guardó el registro sin cambios relevantes.",
+
+    responsable:
+        responsable ||
+        "Sistema VIREON",
+
+    fecha:
+        fechaActual
+
+});
+
+
+localStorage.setItem(
+    claveTrazabilidad,
+    JSON.stringify(historial)
+);
 
                             console.log(
                                 "Riesgo actualizado:",
@@ -2130,17 +2259,140 @@ document.addEventListener("DOMContentLoaded", function () {
                             "Oportunidad"
                         ) {
 
-                            await OportunidadesStorage
-                                .actualizar(
-                                    idEnEdicion,
-                                    datosOportunidad
-                                );
+                          // Obtener versión anterior antes de actualizar
+const oportunidadAnterior =
+    await OportunidadesStorage.obtenerPorId(
+        idEnEdicion
+    );
 
+const cambios = [];
 
-                            console.log(
-                                "Oportunidad actualizada:",
-                                idEnEdicion
-                            );
+if (oportunidadAnterior) {
+
+    if (oportunidadAnterior.estado !== datosOportunidad.estado) {
+        cambios.push(
+            `Estado: ${oportunidadAnterior.estado || "-"} → ${datosOportunidad.estado || "-"}`
+        );
+    }
+
+    if (
+        Number(oportunidadAnterior.probabilidad) !==
+        Number(datosOportunidad.probabilidad)
+    ) {
+        cambios.push(
+            `Probabilidad: ${oportunidadAnterior.probabilidad || "-"} → ${datosOportunidad.probabilidad || "-"}`
+        );
+    }
+
+    if (
+        Number(oportunidadAnterior.impacto) !==
+        Number(datosOportunidad.impacto)
+    ) {
+        cambios.push(
+            `Impacto: ${oportunidadAnterior.impacto || "-"} → ${datosOportunidad.impacto || "-"}`
+        );
+    }
+
+    if (
+        oportunidadAnterior.criticidad !==
+        datosOportunidad.criticidad
+    ) {
+        cambios.push(
+            `Criticidad: ${oportunidadAnterior.criticidad || "-"} → ${datosOportunidad.criticidad || "-"}`
+        );
+    }
+
+    if (
+        oportunidadAnterior.responsable !==
+        datosOportunidad.responsable
+    ) {
+        cambios.push(
+            `Responsable: ${oportunidadAnterior.responsable || "Sin asignar"} → ${datosOportunidad.responsable || "Sin asignar"}`
+        );
+    }
+
+    if (
+        oportunidadAnterior.planCaptura !==
+        datosOportunidad.planCaptura
+    ) {
+        cambios.push(
+            "Plan de captura actualizado"
+        );
+    }
+
+    if (
+        oportunidadAnterior.titulo !==
+        datosOportunidad.titulo
+    ) {
+        cambios.push(
+            "Título actualizado"
+        );
+    }
+
+    if (
+        oportunidadAnterior.descripcion !==
+        datosOportunidad.descripcion
+    ) {
+        cambios.push(
+            "Descripción actualizada"
+        );
+    }
+}
+
+// Guardar actualización
+await OportunidadesStorage
+    .actualizar(
+        idEnEdicion,
+        datosOportunidad
+    );
+
+// Guardar trazabilidad
+const claveTrazabilidad =
+    `vireon_trazabilidad_${idEnEdicion}`;
+
+let historial = [];
+
+try {
+
+    historial =
+        JSON.parse(
+            localStorage.getItem(
+                claveTrazabilidad
+            )
+        ) || [];
+
+} catch (error) {
+
+    historial = [];
+}
+
+historial.push({
+
+    tipo: "actualizacion",
+
+    titulo: "Registro actualizado",
+
+    descripcion:
+        cambios.length
+            ? cambios.join(" · ")
+            : "Se guardó el registro sin cambios relevantes.",
+
+    responsable:
+        responsable ||
+        "Sistema VIREON",
+
+    fecha: fechaActual
+});
+
+localStorage.setItem(
+    claveTrazabilidad,
+    JSON.stringify(historial)
+);
+
+console.log(
+    "Oportunidad actualizada:",
+    idEnEdicion
+);
 
 
                         } else {
