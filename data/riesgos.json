@@ -1,0 +1,15 @@
+[
+  {
+    "id": "R-001",
+    "titulo": "Retraso en suministro crítico",
+    "descripcion": "Posible retraso por incumplimiento del proveedor principal.",
+    "categoria": "Plazo",
+    "criticidad": "Alta",
+    "probabilidad": 4,
+    "impacto": 5,
+    "responsable": "Miguel González",
+    "estado": "Abierto",
+    "fecha": "2026-08-07",
+    "planAccion": "Revisar plan logístico y activar proveedor alternativo."
+  }
+]
