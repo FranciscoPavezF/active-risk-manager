@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIREON - Acciones</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192.png">>
+ 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- CONTENEDOR PRINCIPAL: ESTRUCTURA MAESTRA (Menú Lateral + Contenido) -->
+    <div class="min-h-screen flex bg-[#F8FAFC]">
+
+        <!-- ========================================== -->
+        <!-- MENÚ DE NAVEGACIÓN VERTICAL (SaaS Sidebar) -->
+        <!-- ========================================== -->
+        <aside class="w-64 bg-[#0F172A] text-slate-300 flex flex-col justify-between shrink-0 border-r border-slate-800 hidden lg:flex">
+            <div>
+                <!-- Brand / Logo Header -->
+                <div class="h-16 px-6 flex items-center space-x-3 border-b border-slate-800">
+                    <div class="w-8 h-8 flex items-center justify-center">
+    <img src="assets/icons/vireon-isotipo.png"
+         alt="VIREON"
+         class="w-8 h-8 object-contain">
+</div>
+                    <div>
+                        <span class="block font-bold text-white text-sm tracking-tight">VIREON</span>
+                        <span class="block text-[10px] text-slate-400 font-medium">Executive Decision Platform</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="p-4 space-y-1 text-xs font-medium">
+                    <a href="dashboard.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="riesgos-oportunidades.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        <span>Riesgos y Oportunidades</span>
+                    </a>
+                    <a href="acciones.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg bg-blue-600 text-white font-semibold transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                        <span>Acciones</span>
+                    </a>
+                    <a href="indicadores.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                        <span>Indicadores</span>
+                    </a>
+                    <a href="reportes.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <span>Reportes</span>
+                    </a>
+                    <a href="configuracion.html" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.2924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Configuración</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Footer Sidebar Support / Branding -->
+            <div class="p-4 border-t border-slate-800 text-center">
+                <span class="block text-[11px] text-slate-400 font-semibold">© 2026 VIREON</span>
+                <span class="block text-[9px] text-slate-500">Executive Decision Platform</span>
+            </div>
+        </aside>
+
+        <!-- CONTENEDOR DE LA PANTALLA -->
+        <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+
+            <!-- HEADER SUPERIOR (64px) -->
+            <header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
+                <div class="w-96 relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </span>
+                    <input id="buscarAcciones" type="text" placeholder="Buscar ID, acción o registro asociado..." class="w-full bg-slate-100 text-xs rounded-lg pl-9 pr-4 py-2 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:bg-white border border-transparent focus:border-blue-600 transition-all">
+                </div>
+
+                <div class="flex items-center space-x-4">
+   <div class="relative">
+    <button
+        id="btnNotificaciones"
+        type="button"
+        class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
+        aria-label="Notificaciones"
+    >
+        <svg class="w-5 h-5 fill-none stroke-current"
+             viewBox="0 0 24 24">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            ></path>
+        </svg>
+
+        <span
+            id="puntoNotificaciones"
+            class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white"
+        ></span>
+    </button>
+
+    <!-- Panel de notificaciones -->
+    <div
+        id="panelNotificaciones"
+        class="hidden absolute right-0 mt-2 w-96 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden"
+    >
+        <div class="px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+            <div>
+                <h3 class="text-sm font-bold text-slate-900">Notificaciones</h3>
+                <p class="text-[11px] text-slate-500">Alertas de seguimiento del proyecto</p>
+            </div>
+
+            <span
+                id="contadorNotificaciones"
+                class="text-xs font-semibold bg-red-50 text-red-600 px-2 py-1 rounded-full"
+            >
+                0
+            </span>
+        </div>
+
+        <div
+            id="listaNotificaciones"
+            class="max-h-80 overflow-y-auto"
+        >
+            <div class="px-4 py-6 text-center text-xs text-slate-500">
+                Cargando alertas...
+            </div>
+        </div>
+
+        <div class="px-4 py-3 border-t border-slate-200 bg-slate-50">
+            <a
+                href="acciones.html"
+                class="block text-center text-xs font-semibold text-blue-600 hover:text-blue-700"
+            >
+                Ver todas las acciones
+            </a>
+        </div>
+    </div>
+</div>
+                    <div class="flex items-center space-x-3 pl-3 border-l border-slate-200">
+                        <div class="w-8 h-8 rounded-full bg-slate-800 text-white font-medium text-xs flex items-center justify-center">VD</div>
+                        <div class="text-left hidden sm:block">
+                            <span class="block text-xs font-semibold text-slate-900">VIREON Demo</span>
+                            <span class="block text-[10px] text-slate-500">Gestor de Riesgos</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- SUBHEADER -->
+            <div class="bg-white border-b border-slate-200 px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shrink-0">
+                <div>
+                    <h1 class="font-bold text-slate-900 text-base">Seguimiento de Acciones</h1>
+                    <p class="text-xs text-slate-500 mt-0.5">Planificación, asignación y seguimiento de acciones asociadas a riesgos y oportunidades.</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium">Cliente: <strong>BHP</strong></span>
+                        <span class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium">Contrato: <strong>Minera Escondida</strong></span>
+                        <span class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium">Faena: <strong>Faena Norte</strong></span>
+                    </div>
+                    <button id="btnNuevaAccion" type="button" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors flex items-center space-x-1.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        <span>Nueva Acción</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="p-6 space-y-6 flex-1 overflow-y-auto">
+
+                <!-- 5. TARJETAS KPI -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <div class="saas-card p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Acciones Abiertas</span>
+                            <div id="kpiAccionesAbiertas" class="text-2xl font-bold text-slate-900 mt-1">0</div>
+                        </div>
+                        <div class="flex items-center text-xs text-blue-600 font-semibold space-x-1 mt-2">
+                            <span>En seguimiento</span>
+                        </div>
+                    </div>
+                    <div class="saas-card p-4 flex flex-col justify-between border-l-4 border-l-red-600">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Acciones Vencidas</span>
+                            <div id="kpiAccionesVencidas" class="text-2xl font-bold text-red-600 mt-1">0</div>
+                        </div>
+                        <div class="flex items-center text-xs text-red-600 font-semibold space-x-1 mt-2">
+                            <span>Requieren gestión prioritaria</span>
+                        </div>
+                    </div>
+                    <div class="saas-card p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Acciones Completadas</span>
+                            <div id="kpiAccionesCompletadas" class="text-2xl font-bold text-emerald-600 mt-1">0</div>
+                        </div>
+                        <div class="flex items-center text-xs text-emerald-600 font-semibold space-x-1 mt-2">
+                            <span id="textoTotalAcciones">De 0 acciones registradas en el período</span>
+                        </div>
+                    </div>
+                    <div class="saas-card p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Cumplimiento Global del Contrato</span>
+                            <div id="kpiCumplimientoAcciones" class="text-2xl font-bold text-slate-900 mt-1">0%</div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mt-2">
+                                <div id="barraCumplimientoAcciones" class="bg-emerald-600 h-full rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-xs text-emerald-600 font-semibold space-x-1 mt-2">
+                            <span>Indicador global del contrato</span>
+                        </div>
+                    </div>
+                    <div class="saas-card p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Acciones de Oportunidades</span>
+                            <div id="kpiAccionesOportunidades" class="text-2xl font-bold text-emerald-700 mt-1">0</div>
+                        </div>
+                        <div class="flex items-center text-xs text-emerald-600 font-semibold space-x-1 mt-2">
+                            <span>Vinculadas a oportunidades activas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. FILTROS -->
+                <div class="saas-card p-4 flex flex-wrap items-center justify-between gap-4 text-xs">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-slate-500 font-medium">Tipo de origen:</span>
+                            <select id="filtroTipoOrigen" class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20">
+                                <option>Todos</option>
+                                <option>Riesgo</option>
+                                <option>Oportunidad</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-slate-500 font-medium">Empresa:</span>
+                            <select id="filtroEmpresa" class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none">
+                                <option>Todas</option>
+                                </select>
+                        </div>
+                        <div class="flex items-center space-x-2">
+    <span class="text-slate-500 font-medium">Contrato:</span>
+    <select id="filtroContrato" class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none">
+        <option>Todos</option>
+    </select>
+</div>
+                        
+                       <div class="flex items-center space-x-2">
+    <span class="text-slate-500 font-medium">Faena:</span>
+    <select id="filtroFaena" class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none">
+        <option>Todas</option>
+    </select>
+</div>
+                       <div class="flex items-center space-x-2">
+    <span class="text-slate-500 font-medium">Responsable:</span>
+
+    <select
+        id="filtroResponsable"
+        class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+    >
+        <option value="Todos">Todos</option>
+    </select>
+</div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-slate-500 font-medium">Estado:</span>
+                            <select id="filtroEstado" class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20">
+                                <option value="Todos">Todos</option>
+<option value="Pendiente">Pendiente</option>
+<option value="En proceso">En proceso</option>
+<option value="Cerrada">Cerrada</option>
+<option value="Vencida">Vencida</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center space-x-2">
+    <span class="text-slate-500 font-medium">Prioridad:</span>
+
+    <select
+        id="filtroPrioridad"
+        class="bg-slate-100 text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+    >
+        <option value="Todas">Todas</option>
+        <option value="Crítica">Crítica</option>
+        <option value="Alta">Alta</option>
+        <option value="Moderada">Moderada</option>
+        <option value="Baja">Baja</option>
+        <option value="Oportunidad">Oportunidad</option>
+    </select>
+</div>
+                    </div>
+                </div>
+
+                <!-- 7. TABLA PRINCIPAL -->
+                <div class="saas-card overflow-hidden">
+                    <div class="p-4 border-b border-slate-100 flex items-center justify-between">
+                        <h2 class="text-sm font-bold text-slate-900">Listado General de Acciones Correctivas y de Mejora</h2>
+                        <span id="textoListadoAcciones" class="text-xs text-slate-500">0 acciones registradas · mostrando registros activos</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-400 border-b border-slate-200 font-semibold uppercase tracking-wider text-[10px]">
+                                    <th class="py-3 px-3">ID</th>
+                                    <th class="py-3 px-3">Tipo de origen</th>
+                                    <th class="py-3 px-3">Acción</th>
+                                    <th class="py-3 px-3">Registro asociado</th>
+                                    <th class="py-3 px-3">Responsable</th>
+                                    <th class="py-3 px-3">Fecha compromiso</th>
+                                    <th class="py-3 px-3">Prioridad</th>
+                                    <th class="py-3 px-3">Estado</th>
+                                    <th class="py-3 px-3">Avance</th>
+                                    <th class="py-3 px-3">Evidencias</th>
+                                    <th class="py-3 px-3">Última actualización</th>
+                                    <th class="py-3 px-3 text-right">Gestión</th>
+                                </tr>
+                            </thead>
+                            <tbody
+                                id="tablaAcciones"
+                                class="divide-y divide-slate-100 text-slate-700"
+                            >
+                                <tr>
+                                    <td colspan="12" class="py-8 px-3 text-center text-slate-400">
+                                        Cargando acciones...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+   <script src="js/data.js"></script>
+<script src="js/riesgos-storage.js"></script>
+<script src="js/acciones-storage.js"></script>
+<script src="js/oportunidades-storage.js"></script>
+<script src="js/evidencias-storage.js"></script>
+<script src="js/acciones.js"></script>
+<script src="js/modal-accion.js"></script>
+<script src="js/app.js"></script>
+<script src="js/notificaciones.js"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIREON - Riesgos y Oportunidades</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- =====================================================
+         CONTENEDOR PRINCIPAL
+    ====================================================== -->
+
+    <div class="min-h-screen flex bg-[#F8FAFC]">
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside
+            class="w-64 bg-[#0F172A] text-slate-300 flex flex-col justify-between shrink-0 border-r border-slate-800 hidden lg:flex"
+        >
+
+            <div>
+
+                <!-- Logo -->
+
+                <div class="h-16 px-6 flex items-center space-x-3 border-b border-slate-800">
+
+                    <div class="w-8 h-8 flex items-center justify-center">
+    <img src="assets/icons/vireon-isotipo.png"
+         alt="VIREON"
+         class="w-8 h-8 object-contain">
+</div>
+
+                    <div>
+
+                        <span class="block font-bold text-white text-sm tracking-tight">
+                            VIREON
+                        </span>
+
+                        <span class="block text-[10px] text-slate-400 font-medium">
+                            Executive Decision Platform
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Navegación -->
+
+               <nav class="p-4 space-y-1 text-xs font-medium">
+
+    <a href="dashboard.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        <span>Dashboard</span>
+    </a>
+
+    <a href="riesgos-oportunidades.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg bg-blue-600 text-white font-semibold transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+        <span>Riesgos y Oportunidades</span>
+    </a>
+
+    <a href="acciones.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+        </svg>
+        <span>Acciones</span>
+    </a>
+
+    <a href="indicadores.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+        </svg>
+        <span>Indicadores</span>
+    </a>
+
+    <a href="reportes.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        <span>Reportes</span>
+    </a>
+
+    <a href="configuracion.html"
+       class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.2924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span>Configuración</span>
+    </a>
+
+</nav>
+
+            </div>
+
+
+            <!-- Footer sidebar -->
+
+            <div class="p-4 border-t border-slate-800 text-center">
+
+                <span class="block text-[11px] text-slate-400 font-semibold">
+                    © 2026 VIREON
+                </span>
+
+                <span class="block text-[9px] text-slate-500">
+                    Executive Decision Platform
+                </span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             CONTENIDO
+        ====================================================== -->
+
+        <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+
+
+            <!-- =====================================================
+                 HEADER
+            ====================================================== -->
+
+            <header
+                class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0"
+            >
+
+                <!-- Buscador -->
+
+                <div class="w-96 relative">
+
+                    <span
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400"
+                    >
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Buscar ID, riesgo u oportunidad..."
+                        class="w-full bg-slate-100 text-xs rounded-lg pl-9 pr-4 py-2 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:bg-white border border-transparent focus:border-blue-600 transition-all"
+                    >
+
+                </div>
+
+
+                <!-- Usuario -->
+      <div class="flex items-center space-x-4">
+<div class="relative">
+    <button
+        id="btnNotificaciones"
+        type="button"
+        class="relative p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
+        aria-label="Notificaciones"
+    >
+        <svg class="w-5 h-5 fill-none stroke-current"
+             viewBox="0 0 24 24">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            ></path>
+        </svg>
+
+        <span
+            id="puntoNotificaciones"
+            class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white"
+        ></span>
+    </button>
+
+    <!-- Panel de notificaciones -->
+    <div
+        id="panelNotificaciones"
+        class="hidden absolute right-0 mt-2 w-96 bg-white border border-slate-200 rounded-xl shadow-xl z-50 overflow-hidden"
+    >
+        <div class="px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+            <div>
+                <h3 class="text-sm font-bold text-slate-900">Notificaciones</h3>
+                <p class="text-[11px] text-slate-500">Alertas de seguimiento del proyecto</p>
+            </div>
+
+            <span
+                id="contadorNotificaciones"
+                class="text-xs font-semibold bg-red-50 text-red-600 px-2 py-1 rounded-full"
+            >
+                0
+            </span>
+        </div>
+
+        <div
+            id="listaNotificaciones"
+            class="max-h-80 overflow-y-auto"
+        >
+            <div class="px-4 py-6 text-center text-xs text-slate-500">
+                Cargando alertas...
+            </div>
+        </div>
+
+        <div class="px-4 py-3 border-t border-slate-200 bg-slate-50">
+            <a
+                href="acciones.html"
+                class="block text-center text-xs font-semibold text-blue-600 hover:text-blue-700"
+            >
+                Ver todas las acciones
+            </a>
+        </div>
+    </div>
+</div>
+                
+
+
+                    <div class="flex items-center space-x-3 pl-3 border-l border-slate-200">
+
+                        <div
+                            class="w-8 h-8 rounded-full bg-slate-800 text-white font-medium text-xs flex items-center justify-center"
+                        >
+                            VD
+                        </div>
+
+                        <div class="text-left hidden sm:block">
+
+                            <span class="block text-xs font-semibold text-slate-900">
+                                VIREON Demo
+                            </span>
+
+                            <span class="block text-[10px] text-slate-500">
+                                Gestor de Riesgos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 SUBHEADER
+            ====================================================== -->
+
+            <div
+                class="bg-white border-b border-slate-200 px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shrink-0"
+            >
+
+                <div>
+
+                    <h1 class="font-bold text-slate-900 text-base">
+                        Riesgos y Oportunidades
+                    </h1>
+
+                    <p class="text-xs text-slate-500 mt-0.5">
+                        Gestión integral de amenazas y oportunidades para apoyar la toma de decisiones.
+                    </p>
+
+                </div>
+
+
+                <div class="flex items-center space-x-3">
+
+                    <div class="flex items-center space-x-2 text-xs">
+
+                        <span
+                            class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium"
+                        >
+                            Cliente: <strong>BHP</strong>
+                        </span>
+
+                        <span
+                            class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium"
+                        >
+                            Contrato: <strong>Minera Escondida</strong>
+                        </span>
+
+                        <span
+                            class="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md border border-slate-200 font-medium"
+                        >
+                            Faena: <strong>Faena Norte</strong>
+                        </span>
+
+                    </div>
+
+
+                    <!-- BOTÓN NUEVO REGISTRO -->
+
+                    <button
+                        id="btnNuevoRegistro"
+                        class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-colors flex items-center space-x-2"
+                    >
+
+                        <span class="text-base leading-none">＋</span>
+
+                        <span>Nuevo Registro</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 CONTENIDO PRINCIPAL
+            ====================================================== -->
+
+            <main class="p-6 space-y-6 flex-1 overflow-y-auto">
+
+
+                <!-- =================================================
+                     1. ESTADO GENERAL
+                ================================================== -->
+
+                <div
+                    class="saas-card p-4 border-l-4 border-l-amber-500 bg-amber-50/20 flex flex-col md:flex-row md:items-center justify-between gap-4 relative overflow-hidden"
+                >
+
+                    <div class="space-y-1.5">
+
+                        <div class="flex items-center space-x-2.5">
+
+                            <span
+                                class="w-3.5 h-3.5 rounded-full bg-amber-500 animate-pulse shrink-0"
+                            ></span>
+
+                            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900">
+                                Estado General del Portafolio
+                            </h2>
+
+                        </div>
+
+
+                        <p class="text-xs text-slate-700 font-medium">
+                            El portafolio requiere atención por la permanencia de cuatro riesgos críticos,
+                            mientras siete oportunidades activas mantienen un potencial relevante de captura
+                            de valor. Las acciones vencidas asociadas deben priorizarse para reducir la
+                            exposición del contrato.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm text-right shrink-0"
+                    >
+
+                        <span class="block text-[10px] font-bold text-slate-400 uppercase">
+                            Salud del Portafolio
+                        </span>
+
+                        <div class="text-xl font-bold text-amber-600 mt-0.5">
+                            78 / 100
+                            <span class="text-xs font-semibold text-amber-600">
+                                Atención
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     2. KPI
+                ================================================== -->
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+
+                    <div
+                        class="saas-card p-4 flex flex-col justify-between border-l-4 border-l-red-600"
+                    >
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Riesgos Críticos
+                            </span>
+
+                            <div class="text-2xl font-bold text-red-600 mt-1">
+                                4
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs text-red-600 font-semibold mt-2">
+                            Requieren intervención prioritaria
+                        </span>
+
+                    </div>
+
+
+                    <div class="saas-card p-4 flex flex-col justify-between">
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Oportunidades Activas
+                            </span>
+
+                            <div class="text-2xl font-bold text-emerald-600 mt-1">
+                                7
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs text-emerald-600 font-semibold mt-2">
+                            Potencial capturable
+                        </span>
+
+                    </div>
+
+
+                    <div class="saas-card p-4 flex flex-col justify-between">
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Exposición Económica
+                            </span>
+
+                            <div class="text-lg font-bold text-blue-600 mt-1">
+                                US$ 320.000
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs text-blue-600 font-semibold mt-2">
+                            Riesgos actualmente expuestos
+                        </span>
+
+                    </div>
+
+
+                    <div class="saas-card p-4 flex flex-col justify-between">
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Beneficio Potencial
+                            </span>
+
+                            <div class="text-lg font-bold text-emerald-600 mt-1">
+                                US$ 480.000
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs text-emerald-600 font-semibold mt-2">
+                            Oportunidades activas
+                        </span>
+
+                    </div>
+
+
+                    <div class="saas-card p-4 flex flex-col justify-between">
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Acciones Pendientes
+                            </span>
+
+                            <div class="text-2xl font-bold text-slate-900 mt-1">
+                                28
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs text-amber-600 font-semibold mt-2">
+                            12 requieren atención inmediata
+                        </span>
+
+                    </div>
+
+
+                    <div class="saas-card p-4 flex flex-col justify-between">
+
+                        <div>
+
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-wider text-slate-400"
+                            >
+                                Cumplimiento Global
+                            </span>
+
+                            <div class="text-2xl font-bold text-slate-900 mt-1">
+                                85%
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-2 space-y-1">
+
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+
+                                <div
+                                    class="bg-blue-600 h-full rounded-full"
+                                    style="width: 85%"
+                                ></div>
+
+                            </div>
+
+                            <span class="block text-[10px] text-slate-500 font-semibold">
+                                Indicador global del contrato
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     3. MATRIZ DE RIESGOS
+                ================================================== -->
+<div class="saas-card p-5 space-y-4">
+
+    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+
+        <div>
+            <h2 class="text-sm font-bold text-slate-900">
+                Matriz de Riesgos 5×5
+            </h2>
+
+            <p class="text-xs text-slate-500 mt-0.5">
+                Evaluación de severidad basada en probabilidad e impacto.
+            </p>
+        </div>
+
+        <div class="flex items-center gap-2 text-[10px] font-medium">
+
+            <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+                ● Bajo
+            </span>
+
+            <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                ● Moderado
+            </span>
+
+            <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">
+                ● Alto
+            </span>
+
+            <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-red-50 text-red-700 border border-red-100">
+                ● Crítico
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="overflow-x-auto">
+
+        <div class="min-w-[600px] grid grid-cols-6 gap-2 text-xs text-center font-medium">
+
+            <!-- HEADER -->
+
+            <div class="p-2 font-bold text-slate-400 text-right flex items-center justify-end">
+                Impacto \ Prob.
+            </div>
+
+            <div class="p-2 font-bold text-slate-700 bg-slate-50 rounded">
+                1 Muy Baja
+            </div>
+
+            <div class="p-2 font-bold text-slate-700 bg-slate-50 rounded">
+                2 Baja
+            </div>
+
+            <div class="p-2 font-bold text-slate-700 bg-slate-50 rounded">
+                3 Media
+            </div>
+
+            <div class="p-2 font-bold text-slate-700 bg-slate-50 rounded">
+                4 Alta
+            </div>
+
+            <div class="p-2 font-bold text-slate-700 bg-slate-50 rounded">
+                5 Muy Alta
+            </div>
+
+
+            <!-- =========================================
+                 IMPACTO 5
+            ========================================== -->
+
+            <div class="p-3 font-bold text-slate-700 bg-slate-50 rounded flex items-center justify-end">
+                5 Crítico
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="5"
+                data-probabilidad="1"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="5"
+                data-probabilidad="2"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="5"
+                data-probabilidad="3"
+                class="p-3 bg-amber-50 border border-amber-200 rounded min-h-[70px] flex flex-col items-center justify-center text-amber-700">
+                <span>Alto</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="5"
+                data-probabilidad="4"
+                class="p-3 bg-red-50 border border-red-200 rounded min-h-[70px] flex flex-col items-center justify-center text-red-700">
+                <span>Crítico</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="5"
+                data-probabilidad="5"
+                class="p-3 bg-red-50 border border-red-200 rounded min-h-[70px] flex flex-col items-center justify-center text-red-700">
+                <span>Crítico</span>
+            </div>
+
+
+            <!-- =========================================
+                 IMPACTO 4
+            ========================================== -->
+
+            <div class="p-3 font-bold text-slate-700 bg-slate-50 rounded flex items-center justify-end">
+                4 Mayor
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="4"
+                data-probabilidad="1"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="4"
+                data-probabilidad="2"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="4"
+                data-probabilidad="3"
+                class="p-3 bg-amber-50 border border-amber-200 rounded min-h-[70px] flex flex-col items-center justify-center text-amber-700">
+                <span>Alto</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="4"
+                data-probabilidad="4"
+                class="p-3 bg-red-50 border border-red-200 rounded min-h-[70px] flex flex-col items-center justify-center text-red-700">
+                <span>Crítico</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="4"
+                data-probabilidad="5"
+                class="p-3 bg-red-50 border border-red-200 rounded min-h-[70px] flex flex-col items-center justify-center text-red-700">
+                <span>Crítico</span>
+            </div>
+
+
+            <!-- =========================================
+                 IMPACTO 3
+            ========================================== -->
+
+            <div class="p-3 font-bold text-slate-700 bg-slate-50 rounded flex items-center justify-end">
+                3 Moderado
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="3"
+                data-probabilidad="1"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="3"
+                data-probabilidad="2"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="3"
+                data-probabilidad="3"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="3"
+                data-probabilidad="4"
+                class="p-3 bg-amber-50 border border-amber-200 rounded min-h-[70px] flex flex-col items-center justify-center text-amber-700">
+                <span>Alto</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="3"
+                data-probabilidad="5"
+                class="p-3 bg-amber-50 border border-amber-200 rounded min-h-[70px] flex flex-col items-center justify-center text-amber-700">
+                <span>Alto</span>
+            </div>
+
+
+            <!-- =========================================
+                 IMPACTO 2
+            ========================================== -->
+
+            <div class="p-3 font-bold text-slate-700 bg-slate-50 rounded flex items-center justify-end">
+                2 Bajo
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="2"
+                data-probabilidad="1"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="2"
+                data-probabilidad="2"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="2"
+                data-probabilidad="3"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="2"
+                data-probabilidad="4"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="2"
+                data-probabilidad="5"
+                class="p-3 bg-amber-50 border border-amber-200 rounded min-h-[70px] flex flex-col items-center justify-center text-amber-700">
+                <span>Alto</span>
+            </div>
+
+
+            <!-- =========================================
+                 IMPACTO 1
+            ========================================== -->
+
+            <div class="p-3 font-bold text-slate-700 bg-slate-50 rounded flex items-center justify-end">
+                1 Menor
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="1"
+                data-probabilidad="1"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="1"
+                data-probabilidad="2"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="1"
+                data-probabilidad="3"
+                class="p-3 bg-emerald-50 border border-emerald-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Bajo</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="1"
+                data-probabilidad="4"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+            <div
+                data-celda-riesgo
+                data-impacto="1"
+                data-probabilidad="5"
+                class="p-3 bg-blue-50 border border-blue-100 rounded min-h-[70px] flex flex-col items-center justify-center">
+                <span>Moderado</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+                <!-- =================================================
+                     4. ALERTAS
+                ================================================== -->
+
+                <div class="saas-card p-5">
+
+                    <div class="flex items-center justify-between mb-3">
+
+                        <h2 class="text-sm font-bold text-slate-900">
+                            Alertas Críticas del Portafolio
+                        </h2>
+
+                        <span
+                            class="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-200"
+                        >
+                            2 Urgentes
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-y-2.5 text-xs">
+
+                        <div
+                            class="flex items-start space-x-3 p-3 rounded-lg bg-red-50/60 border border-red-100"
+                        >
+
+                            <span
+                                class="w-2.5 h-2.5 rounded-full bg-red-600 mt-1 shrink-0"
+                            ></span>
+
+                            <div>
+
+                                <span class="font-bold text-slate-900 block">
+                                    ALERTA CRÍTICA: R-014 permanece en condición crítica.
+                                </span>
+
+                                <span class="text-slate-500 text-[11px]">
+                                    Requiere seguimiento prioritario.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="flex items-start space-x-3 p-3 rounded-lg bg-emerald-50/40 border border-emerald-100"
+                        >
+
+                            <span
+                                class="w-2.5 h-2.5 rounded-full bg-emerald-600 mt-1 shrink-0"
+                            ></span>
+
+                            <div>
+
+                                <span class="font-bold text-slate-900 block">
+                                    ALERTA DE OPORTUNIDAD: O-007 requiere evaluación.
+                                </span>
+
+                                <span class="text-slate-500 text-[11px]">
+                                    Potencial de captura relevante.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     5. FILTROS
+                ================================================== -->
+
+                <div class="flex flex-wrap items-center gap-3 text-xs">
+
+                    <select
+                        class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-slate-700 font-medium"
+                    >
+                        <option>Tipo: Todos</option>
+                        <option>Riesgos</option>
+                        <option>Oportunidades</option>
+                    </select>
+
+
+                    <select
+                        class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-slate-700 font-medium"
+                    >
+                        <option>Criticidad: Todas</option>
+                        <option>Crítico</option>
+                        <option>Alto</option>
+                        <option>Medio</option>
+                        <option>Bajo</option>
+                    </select>
+
+
+                    <select
+                        class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-slate-700 font-medium"
+                    >
+                        <option>Estado: Todos</option>
+                        <option>Abierto</option>
+                        <option>En proceso</option>
+                        <option>Cerrado</option>
+                    </select>
+
+
+                    <select
+                        class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-slate-700 font-medium"
+                    >
+                        <option>Responsable: Todos</option>
+                        <option>Miguel González</option>
+                        <option>Sin asignar</option>
+                    </select>
+
+
+                    <select
+                        class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-slate-700 font-medium"
+                    >
+                        <option>Categoría: Todas</option>
+                        <option>Plazo</option>
+                        <option>Costo</option>
+                        <option>Calidad</option>
+                        <option>Seguridad</option>
+                        <option>Ambiental</option>
+                    </select>
+
+
+                    <div class="relative flex-1 min-w-[200px]">
+
+                        <input
+                            type="text"
+                            placeholder="Buscar por ID o descripción..."
+                            class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-slate-700 placeholder-slate-400"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     6. TABLA DINÁMICA
+                ================================================== -->
+
+                <div class="saas-card overflow-hidden space-y-3">
+
+                    <div class="p-5 pb-0 flex items-center justify-between">
+
+                        <h2 class="text-sm font-bold text-slate-900">
+                            Portafolio de Riesgos y Oportunidades
+                        </h2>
+
+                        <span class="text-xs text-slate-400 font-medium">
+                            Mostrando registros activos
+                        </span>
+
+                    </div>
+
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full min-w-[1250px] text-left text-xs">
+
+                            <thead
+                                class="bg-slate-50 border-y border-slate-200 text-slate-500 font-semibold uppercase tracking-wider text-[10px]"
+                            >
+
+                                <tr>
+
+                                    <th class="p-4 w-[72px] whitespace-nowrap">
+                                        ID
+                                    </th>
+
+                                    <th class="p-4">
+                                        Tipo
+                                    </th>
+
+                                    <th class="p-4">
+                                        Descripción
+                                    </th>
+
+                                    <th class="p-4">
+                                        Categoría
+                                    </th>
+
+                                    <th class="p-4">
+                                        Prob. / Impacto
+                                    </th>
+
+                                    <th class="p-4">
+                                        Nivel
+                                    </th>
+
+                                    <th class="p-4">
+                                        Responsable
+                                    </th>
+
+                                    <th class="p-4 min-w-[130px] whitespace-nowrap">
+                                        Estado
+                                    </th>
+
+                                    <th class="p-4">
+                                        Última Actualización
+                                    </th>
+
+                                    <th class="p-4 text-right">
+                                        Gestión
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <!-- IMPORTANTE:
+                                 riesgos.js llena esta tabla automáticamente -->
+
+                            <tbody
+                                id="tablaRiesgos"
+                                class="divide-y divide-slate-100 text-slate-700"
+                            >
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     7. RESUMEN
+                ================================================== -->
+
+                <div class="saas-card p-6 space-y-3 border-l-4 border-l-blue-600">
+
+                    <div class="border-b border-slate-100 pb-3">
+
+                        <h2 class="text-sm font-bold text-slate-900">
+                            Resumen Ejecutivo del Portafolio
+                        </h2>
+
+                        <p class="text-xs text-slate-500 mt-0.5">
+                            Análisis sintético de exposición y captura de valor.
+                        </p>
+
+                    </div>
+
+
+                    <p class="text-xs text-slate-700 leading-relaxed font-medium">
+
+                        El portafolio mantiene una exposición económica de US$ 320.000.
+                        Persisten riesgos que requieren intervención prioritaria y oportunidades
+                        con potencial relevante de captura de valor. Se recomienda mantener
+                        seguimiento activo de responsables, estados y planes de acción.
+
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     8. CONCLUSIONES
+                ================================================== -->
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+
+                        <span class="font-bold text-slate-900 block mb-1">
+                            1. PRINCIPALES PREOCUPACIONES
+                        </span>
+
+                        <p class="text-slate-600 text-[11px]">
+                            Persistencia de riesgos críticos y registros sin responsable.
+                        </p>
+
+                    </div>
+
+
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+
+                        <span class="font-bold text-slate-900 block mb-1">
+                            2. DECISIONES RECOMENDADAS
+                        </span>
+
+                        <p class="text-slate-600 text-[11px]">
+                            Priorizar responsables y planes de mitigación.
+                        </p>
+
+                    </div>
+
+
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+
+                        <span class="font-bold text-slate-900 block mb-1">
+                            3. OPORTUNIDADES PRIORITARIAS
+                        </span>
+
+                        <p class="text-slate-600 text-[11px]">
+                            Acelerar evaluación y captura de valor.
+                        </p>
+
+                    </div>
+
+
+                    <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm">
+
+                        <span class="font-bold text-slate-900 block mb-1">
+                            4. IMPACTO ECONÓMICO
+                        </span>
+
+                        <p class="text-slate-600 text-[11px]">
+                            Exposición y beneficios requieren seguimiento ejecutivo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================================
+         MODAL SELECCIONAR TIPO DE REGISTRO
+    =========================================================== -->
+
+    <div
+        id="modalTipoRegistro"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+    >
+
+        <div
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden"
+        >
+
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800">
+                        Nuevo Registro
+                    </h2>
+
+                    <p class="text-xs text-slate-500 mt-1">
+                        Selecciona el tipo de registro que deseas crear.
+                    </p>
+                </div>
+
+                <button
+                    id="cerrarTipoRegistro"
+                    type="button"
+                    class="w-9 h-9 flex items-center justify-center rounded-lg text-2xl text-slate-500 hover:text-red-600 hover:bg-red-50"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <button
+                    id="btnElegirRiesgo"
+                    type="button"
+                    class="group text-left p-5 rounded-xl border-2 border-slate-200 hover:border-red-300 hover:bg-red-50/40 transition-all"
+                >
+                    <span class="block text-2xl mb-2">⚠️</span>
+                    <span class="block text-sm font-bold text-slate-900">
+                        Riesgo
+                    </span>
+                    <span class="block text-xs text-slate-500 mt-1 leading-relaxed">
+                        Registrar una amenaza que pueda afectar plazo, costo, calidad, seguridad u otros objetivos.
+                    </span>
+                </button>
+
+                <button
+                    id="btnElegirOportunidad"
+                    type="button"
+                    class="group text-left p-5 rounded-xl border-2 border-slate-200 hover:border-emerald-300 hover:bg-emerald-50/40 transition-all"
+                >
+                    <span class="block text-2xl mb-2">💡</span>
+                    <span class="block text-sm font-bold text-slate-900">
+                        Oportunidad
+                    </span>
+                    <span class="block text-xs text-slate-500 mt-1 leading-relaxed">
+                        Registrar una posibilidad de mejora, ahorro, eficiencia o captura de valor.
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================================
+         MODAL NUEVO / EDITAR RIESGO U OPORTUNIDAD
+    =========================================================== -->
+
+    <div
+        id="modalNuevoRiesgo"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+    >
+
+        <div
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden max-h-[90vh] overflow-y-auto"
+        >
+
+
+            <!-- Header -->
+
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+
+                <div>
+
+                    <h2
+                        id="tituloModal"
+                        class="text-xl font-bold text-slate-800"
+                    >
+                        Nuevo Riesgo
+                    </h2>
+
+                    <p
+                        id="subtituloModal"
+                        class="text-xs text-slate-500 mt-1"
+                    >
+                        Complete los antecedentes principales del registro.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="cerrarModal"
+                    type="button"
+                    class="w-9 h-9 flex items-center justify-center rounded-lg text-2xl text-slate-500 hover:text-red-600 hover:bg-red-50"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Body -->
+
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- EMPRESA -->
+<div>
+    <label for="campoEmpresa" class="block text-xs font-semibold text-slate-600 mb-1">
+        Empresa
+    </label>
+
+    <select
+        id="campoEmpresa"
+        class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+    >
+        <option value="">Seleccionar empresa...</option>
+    </select>
+</div>
+
+
+<!-- CONTRATO -->
+<div>
+    <label for="campoContrato" class="block text-xs font-semibold text-slate-600 mb-1">
+        Contrato
+    </label>
+
+    <select
+        id="campoContrato"
+        class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+    >
+        <option value="">Seleccionar contrato...</option>
+    </select>
+</div>
+
+
+<!-- FAENA -->
+<div>
+    <label for="campoFaena" class="block text-xs font-semibold text-slate-600 mb-1">
+        Faena
+    </label>
+
+    <select
+        id="campoFaena"
+        class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+    >
+        <option value="">Seleccionar faena...</option>
+    </select>
+</div>
+
+                <!-- ID -->
+
+                <div>
+
+                    <label
+                        for="nuevoId"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        ID
+                    </label>
+
+                    <input
+                        id="nuevoId"
+                        type="text"
+                        placeholder="Ej: R-002"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+                    >
+
+                </div>
+
+
+                <!-- Responsable -->
+
+                <div>
+
+                    <label
+                        for="nuevoResponsable"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Responsable
+                    </label>
+
+                    <input
+                        id="nuevoResponsable"
+                        type="text"
+                        placeholder="Nombre del responsable"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+                    >
+
+                </div>
+
+
+                <!-- Título -->
+
+                <div class="md:col-span-2">
+
+                    <label
+                        for="nuevoTitulo"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Título
+                    </label>
+
+                    <input
+                        id="nuevoTitulo"
+                        type="text"
+                        placeholder="Título breve del riesgo"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+                    >
+
+                </div>
+
+
+                <!-- Descripción -->
+
+                <div class="md:col-span-2">
+
+                    <label
+                        for="nuevaDescripcion"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="nuevaDescripcion"
+                        rows="3"
+                        placeholder="Describa el evento de riesgo..."
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Categoría -->
+
+                <div>
+
+                    <label
+                        for="nuevaCategoria"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Categoría
+                    </label>
+
+                    <select
+                        id="nuevaCategoria"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white"
+                    >
+
+                        <option value="Plazo">Plazo</option>
+                        <option value="Costo">Costo</option>
+                        <option value="Calidad">Calidad</option>
+                        <option value="Seguridad">Seguridad</option>
+                        <option value="Ambiental">Ambiental</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Estado -->
+
+                <div>
+
+                    <label
+                        for="nuevoEstado"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Estado
+                    </label>
+
+                    <select
+                        id="nuevoEstado"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white"
+                    >
+
+                        <option value="Abierto">Abierto</option>
+                        <option value="En proceso">En proceso</option>
+                        <option value="Cerrado">Cerrado</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Probabilidad -->
+
+                <div>
+
+                    <label
+                        for="nuevaProbabilidad"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Probabilidad
+                    </label>
+
+                    <select
+                        id="nuevaProbabilidad"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white"
+                    >
+
+                        <option value="1">1 - Muy baja</option>
+                        <option value="2">2 - Baja</option>
+                        <option value="3" selected>3 - Media</option>
+                        <option value="4">4 - Alta</option>
+                        <option value="5">5 - Muy alta</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Impacto -->
+
+                <div>
+
+                    <label
+                        id="labelImpacto"
+                        for="nuevoImpacto"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Impacto
+                    </label>
+
+                    <select
+                        id="nuevoImpacto"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white"
+                    >
+
+                        <option value="1">1 - Menor</option>
+                        <option value="2">2 - Bajo</option>
+                        <option value="3" selected>3 - Moderado</option>
+                        <option value="4">4 - Mayor</option>
+                        <option value="5">5 - Crítico</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Beneficio potencial: visible solo para oportunidades -->
+
+                <div
+                    id="grupoBeneficioPotencial"
+                    class="hidden"
+                >
+
+                    <label
+                        for="nuevoBeneficioPotencial"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Beneficio Potencial
+                    </label>
+
+                    <input
+                        id="nuevoBeneficioPotencial"
+                        type="number"
+                        min="0"
+                        step="1"
+                        placeholder="Ej: 180000"
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600"
+                    >
+
+                    <span class="block text-[10px] text-slate-400 mt-1">
+                        Ingresa el valor estimado en la moneda definida para la estructura.
+                    </span>
+
+                </div>
+
+
+                <!-- Plan -->
+
+                <div class="md:col-span-2">
+
+                    <label
+                        id="labelPlan"
+                        for="nuevoPlan"
+                        class="block text-xs font-bold text-slate-500 mb-1"
+                    >
+                        Plan de Acción
+                    </label>
+
+                    <textarea
+                        id="nuevoPlan"
+                        rows="3"
+                        placeholder="Indique las medidas de tratamiento propuestas..."
+                        class="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div
+                class="border-t bg-slate-50 px-6 py-4 flex justify-end gap-3"
+            >
+
+                <button
+                    id="cancelarModal"
+                    type="button"
+                    class="px-5 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-100"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    id="guardarRiesgo"
+                    type="button"
+                    class="px-6 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 shadow-sm"
+                >
+                    Guardar Riesgo
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ==========================================================
+         MODAL VER DETALLE RIESGO / OPORTUNIDAD
+    =========================================================== -->
+
+    <div
+        id="modalVerRegistro"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50"
+    >
+
+        <div
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden max-h-[90vh] overflow-y-auto"
+        >
+
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200">
+
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <h2
+                            id="verTituloModal"
+                            class="text-xl font-bold text-slate-800"
+                        >
+                            Detalle del Registro
+                        </h2>
+
+                        <span
+                            id="verBadgeTipo"
+                            class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700"
+                        >
+                            Registro
+                        </span>
+
+                    </div>
+
+                    <p
+                        id="verSubtituloModal"
+                        class="text-xs text-slate-500 mt-1"
+                    >
+                        Información completa del registro.
+                    </p>
+
+                </div>
+
+                <button
+                    id="cerrarVerRegistro"
+                    type="button"
+                    class="w-9 h-9 flex items-center justify-center rounded-lg text-2xl text-slate-500 hover:text-red-600 hover:bg-red-50"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Empresa</span>
+                    <div id="verEmpresa" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Contrato</span>
+                    <div id="verContrato" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Faena</span>
+                    <div id="verFaena" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">ID</span>
+                    <div id="verId" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-bold text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Responsable</span>
+                    <div id="verResponsable" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Última Actualización</span>
+                    <div id="verFecha" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Título</span>
+                    <div id="verTitulo" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-900 min-h-[42px]">-</div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Descripción</span>
+                    <div id="verDescripcion" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-3 text-sm text-slate-700 min-h-[90px] whitespace-pre-wrap">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Categoría</span>
+                    <div id="verCategoria" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Estado</span>
+                    <div id="verEstado" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Probabilidad</span>
+                    <div id="verProbabilidad" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span id="verLabelImpacto" class="block text-xs font-bold text-slate-500 mb-1">Impacto</span>
+                    <div id="verImpacto" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div>
+                    <span id="verLabelNivel" class="block text-xs font-bold text-slate-500 mb-1">Nivel</span>
+                    <div id="verNivel" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 min-h-[42px]">-</div>
+                </div>
+
+                <div id="verGrupoBeneficio" class="hidden">
+                    <span class="block text-xs font-bold text-slate-500 mb-1">Beneficio Potencial</span>
+                    <div id="verBeneficioPotencial" class="w-full bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2.5 text-sm font-bold text-emerald-700 min-h-[42px]">-</div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <span id="verLabelPlan" class="block text-xs font-bold text-slate-500 mb-1">Plan de Acción</span>
+                    <div id="verPlan" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-3 text-sm text-slate-700 min-h-[90px] whitespace-pre-wrap">-</div>
+                </div>
+
+                <div id="verResumenOportunidad" class="hidden md:col-span-2 p-4 rounded-xl bg-emerald-50/70 border border-emerald-200">
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <span class="block text-[10px] font-bold uppercase tracking-wider text-emerald-600">Potencial de Captura</span>
+                            <p class="text-xs text-emerald-700 mt-1">Valor económico estimado asociado a la oportunidad.</p>
+                        </div>
+                        <div id="verBeneficioDestacado" class="text-xl font-bold text-emerald-700 whitespace-nowrap">-</div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 border-t border-slate-200 pt-5 mt-1">
+
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-800">Evidencias</h3>
+                            <p class="text-xs text-slate-500 mt-1">Documentos, fotografías y respaldos asociados al registro.</p>
+                        </div>
+
+                        <button
+    id="btnAgregarEvidencia"
+    type="button"
+    class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition-colors"
+>
+    <span>＋</span>
+    <span>Agregar evidencia</span>
+</button>
+                    </div>
+
+                    <div id="verEvidencias" class="mt-3 p-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 text-center">
+                        <span class="text-xs text-slate-400">
+                            Este registro todavía no tiene evidencias disponibles en el MVP.
+                        </span>
+                    </div>
+
+                </div>
+<!-- =====================================================
+     TRAZABILIDAD DEL REGISTRO
+====================================================== -->
+
+<div class="md:col-span-2 border-t border-slate-200 pt-5 mt-1">
+
+    <div class="flex items-center justify-between gap-4">
+
+        <div>
+            <h3 class="text-sm font-bold text-slate-800">
+                Trazabilidad del Registro
+            </h3>
+
+            <p class="text-xs text-slate-500 mt-1">
+                Historial de eventos, acciones, responsables y cambios asociados al registro.
+            </p>
+        </div>
+
+        <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
+            Historial
+        </span>
+
+    </div>
+
+
+    <div id="verTrazabilidad" class="mt-4 space-y-3">
+
+        <div class="flex gap-3">
+
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-blue-600 mt-1"></div>
+                <div class="w-px flex-1 bg-slate-200 mt-1"></div>
+            </div>
+
+            <div class="pb-4 flex-1">
+
+                <div class="flex items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-slate-800">
+                        Registro creado
+                    </span>
+
+                    <span class="text-[10px] text-slate-400">
+                        07-08-2026
+                    </span>
+                </div>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    Riesgo incorporado al portafolio.
+                </p>
+
+                <span class="inline-block mt-1 text-[10px] font-semibold text-blue-600">
+                    Miguel González
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="flex gap-3">
+
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-amber-500 mt-1"></div>
+                <div class="w-px flex-1 bg-slate-200 mt-1"></div>
+            </div>
+
+            <div class="pb-4 flex-1">
+
+                <div class="flex items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-slate-800">
+                        Plan de acción definido
+                    </span>
+
+                    <span class="text-[10px] text-slate-400">
+                        08-08-2026
+                    </span>
+                </div>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    Se establece tratamiento y seguimiento del riesgo.
+                </p>
+
+                <span class="inline-block mt-1 text-[10px] font-semibold text-slate-600">
+                    Miguel González
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="flex gap-3">
+
+            <div class="flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-emerald-500 mt-1"></div>
+            </div>
+
+            <div class="flex-1">
+
+                <div class="flex items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-slate-800">
+                        Seguimiento actualizado
+                    </span>
+
+                    <span class="text-[10px] text-slate-400">
+                        09-08-2026
+                    </span>
+                </div>
+
+                <p class="text-xs text-slate-500 mt-1">
+                    Se registra avance en las acciones asociadas.
+                </p>
+
+                <span class="inline-block mt-1 text-[10px] font-semibold text-slate-600">
+                    Sistema VIREON
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </div>
+
+
+            <div class="border-t border-slate-200 bg-slate-50 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+
+                <span id="verTextoTipoRegistro" class="text-xs text-slate-500 font-medium">
+                    Registro VIREON
+                </span>
+
+                <div class="flex justify-end gap-3">
+
+                    <button
+                        id="editarDesdeVer"
+                        type="button"
+                        class="px-5 py-2.5 rounded-lg bg-amber-500 text-white text-sm font-semibold hover:bg-amber-600 shadow-sm"
+                    >
+                        Editar
+                    </button>
+
+                    <button
+                        id="cerrarVerRegistroFooter"
+                        type="button"
+                        class="px-5 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 shadow-sm"
+                    >
+                        Cerrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- =====================================================
+     MODAL AGREGAR EVIDENCIA
+====================================================== -->
+
+<div
+    id="modalEvidencia"
+    class="hidden fixed inset-0 z-[100] bg-slate-900/50 flex items-center justify-center p-4"
+>
+    <div class="bg-white w-full max-w-lg rounded-2xl shadow-xl overflow-hidden">
+
+        <!-- Encabezado -->
+        <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+            <div>
+                <h3 class="text-base font-bold text-slate-800">
+                    Agregar evidencia
+                </h3>
+                <p class="text-xs text-slate-500 mt-1">
+                    Adjunta un respaldo asociado al registro.
+                </p>
+            </div>
+
+            <button
+                id="cerrarModalEvidencia"
+                type="button"
+                class="text-slate-400 hover:text-slate-700 text-xl"
+            >
+                ×
+            </button>
+        </div>
+
+        <!-- Contenido -->
+        <div class="p-6 space-y-5">
+
+            <div>
+                <label
+                    for="archivoEvidencia"
+                    class="block text-xs font-semibold text-slate-600 mb-2"
+                >
+                    Archivo o fotografía
+                </label>
+
+                <input
+                    id="archivoEvidencia"
+                    type="file"
+                    accept="image/*,.pdf,.doc,.docx,.xls,.xlsx"
+                    class="block w-full text-sm text-slate-600 border border-slate-300 rounded-lg p-2.5"
+                >
+            </div>
+
+            <div>
+                <label
+                    for="descripcionEvidencia"
+                    class="block text-xs font-semibold text-slate-600 mb-2"
+                >
+                    Descripción o comentario
+                </label>
+
+                <textarea
+                    id="descripcionEvidencia"
+                    rows="3"
+                    placeholder="Describe brevemente la evidencia..."
+                    class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+            </div>
+
+            <div>
+                <label
+                    for="responsableEvidencia"
+                    class="block text-xs font-semibold text-slate-600 mb-2"
+                >
+                    Responsable
+                </label>
+
+                <input
+                    id="responsableEvidencia"
+                    type="text"
+                    placeholder="Nombre del responsable"
+                    class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+            </div>
+
+            <div>
+                <label
+                    for="fechaEvidencia"
+                    class="block text-xs font-semibold text-slate-600 mb-2"
+                >
+                    Fecha
+                </label>
+
+                <input
+                    id="fechaEvidencia"
+                    type="date"
+                    class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end gap-3">
+
+            <button
+                id="cancelarEvidencia"
+                type="button"
+                class="px-4 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50"
+            >
+                Cancelar
+            </button>
+
+            <button
+                id="guardarEvidencia"
+                type="button"
+                class="px-4 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700"
+            >
+                Guardar evidencia
+            </button>
+
+        </div>
+
+    </div>
+</div>
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script src="js/data.js"></script>
+<script src="js/riesgos-storage.js"></script>
+<script src="js/acciones-storage.js"></script>
+<script src="js/oportunidades-storage.js"></script>
+<script src="js/riesgos.js"></script>
+<script src="js/modal-riesgo.js"></script>
+<script src="js/evidencias-storage.js"></script>
+<script src="js/evidencias.js"></script>
+<script src="js/app.js"></script>
+<script src="js/notificaciones.js"></script>
+</body>
+
+</html>
