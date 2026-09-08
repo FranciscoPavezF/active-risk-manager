@@ -1,0 +1,34 @@
+[
+  {
+  "id": "U-001",
+  "nombre": "VIREON Demo",
+  "cargo": "Gestor de Riesgos",
+  "correo": "demo@vireon.cl",
+  "rol": "Administrador",
+  "estado": "Activo"
+},
+    {
+        "id": "U-002",
+        "nombre": "Juan Pérez",
+        "cargo": "Gerente de Operaciones",
+        "correo": "juan.perez@vireon.cl",
+        "rol": "Gerencia",
+        "estado": "Activo"
+    },
+    {
+        "id": "U-003",
+        "nombre": "J. Soto",
+        "cargo": "Supervisor de Terreno",
+        "correo": "j.soto@vireon.cl",
+        "rol": "Supervisor",
+        "estado": "Activo"
+    },
+    {
+        "id": "U-004",
+        "nombre": "Ana Rojas",
+        "cargo": "Analista de Riesgos",
+        "correo": "ana.rojas@vireon.cl",
+        "rol": "Analista",
+        "estado": "Activo"
+    }
+]
